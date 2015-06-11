@@ -31,7 +31,7 @@ public class ListFragment extends Fragment {
     public static final String TAG = MainActivity.TAG;
 
     ListView listView;
-    ArrayList<Car> items = new ArrayList<>();
+    ArrayList<Car> items = new ArrayList<Car>();
     private OnSelectionChangedListener listener;
 
     @Override
@@ -88,7 +88,7 @@ public class ListFragment extends Fragment {
     }
 
     private void fillArrayList() {
-        items = new ArrayList<>();
+        items = new ArrayList<Car>();
         items.add(new Car(1, "VM", "Passat", new GeoPoint(48.2353168, 13.8367158)));
         items.add(new Car(2, "Mercedes", "190D", new GeoPoint(48.3353168, 13.8368158)));
         items.add(new Car(3, "Audi", "A4", new GeoPoint(48.22558754, 13.94851685)));

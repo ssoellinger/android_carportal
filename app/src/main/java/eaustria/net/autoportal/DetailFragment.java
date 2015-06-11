@@ -1,5 +1,7 @@
 package eaustria.net.autoportal;
 
+import android.location.Location;
+import android.location.LocationManager;
 import android.widget.TextView;
 
 
@@ -27,6 +29,7 @@ public class DetailFragment extends Fragment {
     private TextView mId;
     private TextView mManufacturer;
     private TextView mBrand;
+
     private IGeoPoint mGeoPoint;
     private MapView mMapView;
 
@@ -49,6 +52,7 @@ public class DetailFragment extends Fragment {
         mManufacturer.setText(car.getManufacturer());
         mBrand.setText(car.getBrand());
         mGeoPoint = car.getPosition();
+
         mMapView.getController().setCenter(mGeoPoint);
     }
 

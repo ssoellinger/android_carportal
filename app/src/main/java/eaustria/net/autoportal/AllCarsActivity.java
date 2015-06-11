@@ -46,14 +46,14 @@ public class AllCarsActivity extends Activity {
 
     private void addMarkers() {
         OverlayItem overlayItem;
-        List<OverlayItem> items = new ArrayList<>();
+        List<OverlayItem> items = new ArrayList<OverlayItem>();
         for ( Car car : mCars) {
             overlayItem = new OverlayItem(String.valueOf(car.getId()), car.getBrand() + ", " +
                     car.getManufacturer(), car.getPosition());
             overlayItem.setMarker(getResources().getDrawable(R.drawable.car_icon));
             items.add(overlayItem);
         }
-        ItemizedIconOverlay<OverlayItem> overlayItems = new ItemizedIconOverlay<>(
+        ItemizedIconOverlay<OverlayItem> overlayItems = new ItemizedIconOverlay<OverlayItem>(
                 items, getResources().getDrawable(R.drawable.car_icon),
                 new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
                     @Override
